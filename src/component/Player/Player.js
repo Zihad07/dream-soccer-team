@@ -7,7 +7,7 @@ const Player = (props) => {
 		<div className="card p-3">
 			<div className="d-flex align-items-center">
 				<div className="image">
-					<img src={image} className="rounded-circle" width="155" />
+					<img src={image} className="rounded-circle" width="100" />
 				</div>
 				<div className="ml-3 w-100">
 					<h4 className="mb-0 mt-0">{name}</h4>{" "}
@@ -20,10 +20,10 @@ const Player = (props) => {
 						</div>
 						<div className="d-flex flex-column">
 							{" "}
-							<small className="text-success font-font-weight-bolder">
+							<small className="text-success font-weight-bold">
 								Salary
 							</small>{" "}
-							<span className="number3">${salary}</span>{" "}
+							<span className="font-weight-bold">${salary}</span>{" "}
 						</div>
 					</div>
 					<div className="button mt-2 d-flex flex-row align-items-center">

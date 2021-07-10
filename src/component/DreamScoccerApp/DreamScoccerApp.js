@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import playersData from "../../PlayersData/playersJsonData.js";
 import Player from "../Player/Player";
+import MyTeamInfo from "../MyTeamInfo/MyTeamInfo";
 
 const DreamScoccerApp = () => {
 	const [players, setPlayers] = useState([]);
@@ -19,7 +20,15 @@ const DreamScoccerApp = () => {
 						))}
 					</div>
 				</div>
-				<div className="col-md-4"></div>
+				<div className="col-md-4">
+					<div className="card card-body text-center my-2">
+						<h2>My Dream Team</h2>
+						<MyTeamInfo></MyTeamInfo>
+					</div>
+					<div className="card card-body text-center my-2">
+						<h2>Seleted Player List</h2>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
