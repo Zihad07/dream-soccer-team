@@ -7,10 +7,10 @@ import DreamScoccerApp from "./component/DreamScoccerApp/DreamScoccerApp";
 
 function App() {
 	return (
-		<div>
+		<React.Fragment>
 			<h2 className="text-center my-4">Dream Soccer Team</h2>
 			<DreamScoccerApp></DreamScoccerApp>
-		</div>
+		</React.Fragment>
 	);
 }
 
