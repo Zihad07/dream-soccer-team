@@ -2,12 +2,13 @@ import React from "react";
 import "./Player.css";
 
 const Player = (props) => {
-	const { id, name, age, nationality, photo: image, salary } = props.player;
+	const { name, age, nationality, photo: image, salary } = props.player;
+	const { addPlayer } = props;
 	return (
 		<div className="card p-3">
 			<div className="d-flex align-items-center">
 				<div className="image">
-					<img src={image} className="rounded-circle" width="100" />
+					<img src={image} className="rounded-circle" width="100" alt="" />
 				</div>
 				<div className="ml-3 w-100">
 					<h4 className="mb-0 mt-0">{name}</h4>{" "}
@@ -28,7 +29,10 @@ const Player = (props) => {
 					</div>
 					<div className="button mt-2 d-flex flex-row align-items-center">
 						{" "}
-						<button className="btn btn-sm btn-primary w-100 ml-2">
+						<button
+							className="btn btn-sm btn-primary w-100 ml-2"
+							onClick={() => addPlayer(props.player)}
+						>
 							Add To Your Team
 						</button>
 					</div>
