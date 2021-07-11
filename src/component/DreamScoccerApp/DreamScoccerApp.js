@@ -17,10 +17,17 @@ const DreamScoccerApp = () => {
 	// Action Method
 	const handleAddPlayerToTeam = (player) => {
 		if (myTeamPlayers.indexOf(player) === -1) {
-			setMyTeamPLayers([...myTeamPlayers, player]);
+			setMyTeamPLayers([player, ...myTeamPlayers]);
 			return;
 		}
 		alert(`${player.name} is already in your team.`);
+	};
+
+	const transferPlayer = (player) => {
+		const newTeamPlayersCart = myTeamPlayers.filter(
+			(myPlayer) => myPlayer.id != player.id
+		);
+		setMyTeamPLayers(newTeamPlayersCart);
 	};
 	// console.log(myTeamPlayers);
 	// End Action Method
@@ -46,7 +53,10 @@ const DreamScoccerApp = () => {
 					</div>
 					<div className="card card-body text-center my-2">
 						<h2>Seleted Player List</h2>
-						<PlayerList players={myTeamPlayers}></PlayerList>
+						<PlayerList
+							players={myTeamPlayers}
+							transferPlayer={transferPlayer}
+						></PlayerList>
 					</div>
 				</div>
 			</div>

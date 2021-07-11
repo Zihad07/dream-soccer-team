@@ -2,7 +2,7 @@ import React from "react";
 import SelectedPlayer from "../SelectedPlayer/SelectedPlayer";
 import "./PlayerList.css";
 
-const PlayerList = ({ players }) => {
+const PlayerList = ({ players, transferPlayer }) => {
 	let firstListOfHeading = "";
 	if (players.length > 0) {
 		firstListOfHeading = (
@@ -10,6 +10,7 @@ const PlayerList = ({ players }) => {
 				<span className="badge bg-dark text-white">Image</span>
 				<span className="badge bg-dark text-white">Name</span>
 				<span className="badge bg-info">Salary</span>
+				<span className="">{"    "}</span>
 			</li>
 		);
 	}
@@ -18,7 +19,11 @@ const PlayerList = ({ players }) => {
 			<ul className="list-group">
 				{firstListOfHeading}
 				{players.map((player) => (
-					<SelectedPlayer player={player} key={player.id}></SelectedPlayer>
+					<SelectedPlayer
+						player={player}
+						transferPlayer={transferPlayer}
+						key={player.id}
+					></SelectedPlayer>
 				))}
 			</ul>
 		</React.Fragment>

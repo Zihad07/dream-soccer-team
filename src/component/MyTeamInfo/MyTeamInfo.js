@@ -1,3 +1,5 @@
+import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./MyTeamInfo.css";
 
@@ -28,6 +30,8 @@ const MyTeamInfo = ({ myTeamPlayers }) => {
 					className="badge bg-primary text-white rounded-pill p-2"
 					style={{ fontSize: "1rem" }}
 				>
+					<FontAwesomeIcon icon={faDollarSign} size="lg" />
+					{"  "}
 					{totalBudget}
 				</span>
 			</li>

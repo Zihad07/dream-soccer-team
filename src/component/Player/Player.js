@@ -1,4 +1,10 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faCoffee,
+	faPlusCircle,
+	faDollarSign,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Player.css";
 
 const Player = (props) => {
@@ -24,7 +30,11 @@ const Player = (props) => {
 							<small className="text-success font-weight-bold">
 								Salary
 							</small>{" "}
-							<span className="font-weight-bold">${salary}</span>{" "}
+							<span className="font-weight-bold">
+								<FontAwesomeIcon icon={faDollarSign} size="lg" />
+								{"  "}
+								{salary}
+							</span>{" "}
 						</div>
 					</div>
 					<div className="button mt-2 d-flex flex-row align-items-center">
@@ -33,7 +43,8 @@ const Player = (props) => {
 							className="btn btn-sm btn-primary w-100 ml-2"
 							onClick={() => addPlayer(props.player)}
 						>
-							Add To Your Team
+							<FontAwesomeIcon icon={faPlusCircle} size="lg" />
+							{"  "}Add To Your Team
 						</button>
 					</div>
 				</div>
